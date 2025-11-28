@@ -1,0 +1,19 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Wed Nov 20 10:06:54 2024 
+Best design point: 1
+Design specs: 
+	labs_2025:CM_tb:1	corner	C0 - 
+	current_ratio		8.244
+	(IT("/NM1/D") / IT("/NM0/D"))		Error	No
+	VDC("/VGS1")		700.5m
+	VDC("/VGS2")		888m
+	(IS("/NM1/D") / IS("/NM2/D"))		649.2m
+	(IS("/NM1/D") / IS("/NM0/D"))		8.244
+Design parameters: 
+
+Interactive.47
+Number of points completed: 1
+Number of simulation errors: 1
+Interactive.47 completed. 
+Current time: Wed Nov 20 10:07:04 2024 

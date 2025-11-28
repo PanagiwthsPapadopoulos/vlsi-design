@@ -1,0 +1,2175 @@
+<?xml version="1.0"?>
+<setupdb version="6">data
+	<active>Active Setup
+		<corners>
+			<corner enabled="1">_default</corner>
+			<corner enabled="0">C0
+				<vars>
+					<var>Vc
+						<value>0:0.2:3.3</value>
+					</var>
+				</vars>
+				<models>
+					<model enabled="0">config.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/config.scs</modelfile>
+						<modelsection></modelsection>
+					</model>
+					<model enabled="0">param.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/param.scs</modelfile>
+						<modelsection></modelsection>
+					</model>
+					<model enabled="0">bip.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/bip.scs</modelfile>
+						<modelsection></modelsection>
+					</model>
+					<model enabled="0">cap.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/cap.scs</modelfile>
+						<modelsection></modelsection>
+					</model>
+					<model enabled="0">dio.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/dio.scs</modelfile>
+						<modelsection></modelsection>
+					</model>
+					<model enabled="0">mos.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/mos.scs</modelfile>
+						<modelsection></modelsection>
+					</model>
+					<model enabled="0">photo.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/photo.scs</modelfile>
+						<modelsection></modelsection>
+					</model>
+					<model enabled="0">res.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/res.scs</modelfile>
+						<modelsection></modelsection>
+					</model>
+					<model enabled="0">xh018.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/xh018.scs</modelfile>
+						<modelsection></modelsection>
+					</model>
+					<model enabled="1">gpdk045.scs
+						<modeltest>All</modeltest>
+						<modelblock>Global</modelblock>
+						<modelfile>/mnt/apps/prebuilt/EDA/designkits/GPDK/gpdk045_v_6_0/gpdk045/../models/spectre/gpdk045.scs</modelfile>
+						<modelsection>"tt"</modelsection>
+					</model>
+				</models>
+			</corner>
+		</corners>
+		<extensions>
+			<extension>Parasitics
+				<callback>_parSetupDBExtensionCB</callback>
+				<iconvalue></iconvalue>
+				<icontype></icontype>
+			</extension>
+		</extensions>
+		<currentmode>Single Run, Sweeps and Corners</currentmode>
+		<overwritehistory>0</overwritehistory>
+		<tests>
+			<test enabled="1">labs_2025:VCO_tb:1
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>labs_2025:VCO_tb:1_active</value>
+					</option>
+					<option>cell
+						<value>VCO_tb</value>
+					</option>
+					<option>lib
+						<value>LAB2026</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</tooloptions>
+				<origoptions>
+					<option>cell
+						<value>VCO_tb</value>
+					</option>
+					<option>lib
+						<value>labs_2025</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>tmpstate.344738172</value>
+					</option>
+				</origoptions>
+			</test>
+		</tests>
+		<vars>
+			<var enabled="1">vbias
+				<value>0.8</value>
+				<dependentTests>
+					<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">Vc
+				<value>0.3</value>
+				<dependentTests>
+					<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">vdd
+				<value>1</value>
+				<dependentTests>
+					<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+				</dependentTests>
+			</var>
+		</vars>
+		<overwritehistoryname>Interactive.0</overwritehistoryname>
+		<plottingoptions>
+			<plottingoption>plottingmode
+				<value>Append</value>
+			</plottingoption>
+			<plottingoption>plottype
+				<value>None</value>
+			</plottingoption>
+			<plottingoption>usewaveformtemplate
+				<value>no</value>
+			</plottingoption>
+			<plottingoption>useMaestroPlottingTemplate
+				<value>yes</value>
+			</plottingoption>
+			<plottingoption>waveformtemplate
+				<value></value>
+			</plottingoption>
+			<plottingoption>allplottingtemplates</plottingoption>
+			<plottingoption>defaultplottingtemplate
+				<value></value>
+			</plottingoption>
+		</plottingoptions>
+		<sortVariableValues>0</sortVariableValues>
+		<distributeoptions>
+			<genusjoblimits>
+				<genusjoblimit>ICRP
+					<value>4</value>
+				</genusjoblimit>
+			</genusjoblimits>
+			<specifyjoblimit>1</specifyjoblimit>
+			<parallelrun>1</parallelrun>
+		</distributeoptions>
+	</active>
+	<history>History
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.23
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">C0
+						<vars>
+							<var>Vc
+								<value>0:0.2:3.3</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">config.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/config.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">param.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/param.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">bip.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/bip.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">cap.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/cap.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">dio.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/dio.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">mos.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/mos.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">photo.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/photo.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">res.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/res.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">xh018.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/xh018.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="1">gpdk045.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/GPDK/gpdk045_v_6_0/gpdk045/../models/spectre/gpdk045.scs</modelfile>
+								<modelsection>"tt"</modelsection>
+							</model>
+						</models>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">labs_2025:VCO_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>labs_2025:VCO_tb:1_tmpstate.344738172_Interactive.23</value>
+							</option>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>LAB2026</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>labs_2025</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>tmpstate.344738172</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">vbias
+						<value>0.6</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Vc
+						<value>0.95</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">vdd
+						<value>1.2</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>Replace</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>4</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>1</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+			</checkpoint>
+			<timestamp>Nov 18 22:25:24 2025</timestamp>
+			<uuid>{8ab36536-8b85-49ff-a68c-6541e75f8f18}</uuid>
+			<resultsname>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.23.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.23.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/cn98.it.auth.gr_atsiougk_222524467</localpsfdir>
+			<psfdir>/home/a/atsiougk/simulation/LAB2026/VCO_tb/adexl/results/data/Interactive.23</psfdir>
+			<simdir>$AXL_PROJECT_DIR/LAB2026/VCO_tb/adexl/results/data/Interactive.23</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.23.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.23.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.24
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">C0
+						<vars>
+							<var>Vc
+								<value>0:0.2:3.3</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">config.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/config.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">param.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/param.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">bip.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/bip.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">cap.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/cap.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">dio.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/dio.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">mos.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/mos.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">photo.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/photo.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">res.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/res.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">xh018.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/xh018.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="1">gpdk045.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/GPDK/gpdk045_v_6_0/gpdk045/../models/spectre/gpdk045.scs</modelfile>
+								<modelsection>"tt"</modelsection>
+							</model>
+						</models>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">labs_2025:VCO_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>labs_2025:VCO_tb:1_tmpstate.344738172_Interactive.24</value>
+							</option>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>LAB2026</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>labs_2025</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>tmpstate.344738172</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">vbias
+						<value>0.6</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Vc
+						<value>0.95</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">vdd
+						<value>1.2</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>Replace</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>4</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>1</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+			</checkpoint>
+			<timestamp>Nov 18 22:26:00 2025</timestamp>
+			<uuid>{0330bbb8-6a0b-4b73-b06e-f5a190199f8e}</uuid>
+			<resultsname>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.24.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.24.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/cn98.it.auth.gr_atsiougk_222600595</localpsfdir>
+			<psfdir>/home/a/atsiougk/simulation/LAB2026/VCO_tb/adexl/results/data/Interactive.24</psfdir>
+			<simdir>$AXL_PROJECT_DIR/LAB2026/VCO_tb/adexl/results/data/Interactive.24</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.24.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.24.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.25
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">C0
+						<vars>
+							<var>Vc
+								<value>0:0.2:3.3</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">config.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/config.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">param.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/param.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">bip.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/bip.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">cap.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/cap.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">dio.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/dio.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">mos.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/mos.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">photo.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/photo.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">res.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/res.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">xh018.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/xh018.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="1">gpdk045.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/GPDK/gpdk045_v_6_0/gpdk045/../models/spectre/gpdk045.scs</modelfile>
+								<modelsection>"tt"</modelsection>
+							</model>
+						</models>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">labs_2025:VCO_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>labs_2025:VCO_tb:1_tmpstate.344738172_Interactive.25</value>
+							</option>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>LAB2026</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>labs_2025</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>tmpstate.344738172</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">vbias
+						<value>0.6</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Vc
+						<value>0.95</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">vdd
+						<value>1.2</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>Replace</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>4</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>1</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+			</checkpoint>
+			<timestamp>Nov 18 22:26:21 2025</timestamp>
+			<uuid>{5c1e038b-e211-42ec-a3ac-49a942a997f2}</uuid>
+			<resultsname>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.25.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.25.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/cn98.it.auth.gr_atsiougk_222622119</localpsfdir>
+			<psfdir>/home/a/atsiougk/simulation/LAB2026/VCO_tb/adexl/results/data/Interactive.25</psfdir>
+			<simdir>$AXL_PROJECT_DIR/LAB2026/VCO_tb/adexl/results/data/Interactive.25</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.25.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.25.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.26
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">C0
+						<vars>
+							<var>Vc
+								<value>0:0.2:3.3</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">config.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/config.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">param.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/param.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">bip.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/bip.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">cap.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/cap.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">dio.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/dio.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">mos.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/mos.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">photo.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/photo.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">res.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/res.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">xh018.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/xh018.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="1">gpdk045.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/GPDK/gpdk045_v_6_0/gpdk045/../models/spectre/gpdk045.scs</modelfile>
+								<modelsection>"tt"</modelsection>
+							</model>
+						</models>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">labs_2025:VCO_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>labs_2025:VCO_tb:1_tmpstate.344738172_Interactive.26</value>
+							</option>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>LAB2026</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>labs_2025</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>tmpstate.344738172</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">vbias
+						<value>0.8</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Vc
+						<value>0.95</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">vdd
+						<value>1.2</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>Replace</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>4</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>1</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+			</checkpoint>
+			<timestamp>Nov 18 22:29:05 2025</timestamp>
+			<uuid>{41768ca6-394d-4b13-8b01-736dc6fb716c}</uuid>
+			<resultsname>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.26.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.26.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/cn98.it.auth.gr_atsiougk_222905583</localpsfdir>
+			<psfdir>/home/a/atsiougk/simulation/LAB2026/VCO_tb/adexl/results/data/Interactive.26</psfdir>
+			<simdir>$AXL_PROJECT_DIR/LAB2026/VCO_tb/adexl/results/data/Interactive.26</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.26.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.26.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.27
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">C0
+						<vars>
+							<var>Vc
+								<value>0:0.2:3.3</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">config.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/config.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">param.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/param.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">bip.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/bip.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">cap.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/cap.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">dio.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/dio.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">mos.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/mos.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">photo.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/photo.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">res.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/res.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">xh018.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/xh018.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="1">gpdk045.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/GPDK/gpdk045_v_6_0/gpdk045/../models/spectre/gpdk045.scs</modelfile>
+								<modelsection>"tt"</modelsection>
+							</model>
+						</models>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">labs_2025:VCO_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>labs_2025:VCO_tb:1_tmpstate.344738172_Interactive.27</value>
+							</option>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>LAB2026</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>labs_2025</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>tmpstate.344738172</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">vbias
+						<value>0.8</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Vc
+						<value>0.7</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">vdd
+						<value>1.2</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>Replace</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>4</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>1</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+			</checkpoint>
+			<timestamp>Nov 18 22:29:49 2025</timestamp>
+			<uuid>{70d503da-f4cc-4356-8071-5dc67fa4be82}</uuid>
+			<resultsname>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.27.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.27.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/cn98.it.auth.gr_atsiougk_222949702</localpsfdir>
+			<psfdir>/home/a/atsiougk/simulation/LAB2026/VCO_tb/adexl/results/data/Interactive.27</psfdir>
+			<simdir>$AXL_PROJECT_DIR/LAB2026/VCO_tb/adexl/results/data/Interactive.27</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.27.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.27.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.28
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">C0
+						<vars>
+							<var>Vc
+								<value>0:0.2:3.3</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">config.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/config.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">param.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/param.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">bip.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/bip.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">cap.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/cap.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">dio.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/dio.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">mos.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/mos.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">photo.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/photo.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">res.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/res.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">xh018.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/xh018.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="1">gpdk045.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/GPDK/gpdk045_v_6_0/gpdk045/../models/spectre/gpdk045.scs</modelfile>
+								<modelsection>"tt"</modelsection>
+							</model>
+						</models>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">labs_2025:VCO_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>labs_2025:VCO_tb:1_tmpstate.344738172_Interactive.28</value>
+							</option>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>LAB2026</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>labs_2025</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>tmpstate.344738172</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">vbias
+						<value>0.8</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Vc
+						<value>0.7</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">vdd
+						<value>1.2</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>Replace</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>4</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>1</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+			</checkpoint>
+			<timestamp>Nov 18 22:31:06 2025</timestamp>
+			<uuid>{a6910307-a409-4883-b165-bebc8e161b8c}</uuid>
+			<resultsname>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.28.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.28.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/cn98.it.auth.gr_atsiougk_223106359</localpsfdir>
+			<psfdir>/home/a/atsiougk/simulation/LAB2026/VCO_tb/adexl/results/data/Interactive.28</psfdir>
+			<simdir>$AXL_PROJECT_DIR/LAB2026/VCO_tb/adexl/results/data/Interactive.28</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.28.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.28.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.29
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">C0
+						<vars>
+							<var>Vc
+								<value>0:0.2:3.3</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">config.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/config.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">param.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/param.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">bip.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/bip.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">cap.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/cap.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">dio.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/dio.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">mos.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/mos.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">photo.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/photo.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">res.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/res.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">xh018.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/xh018.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="1">gpdk045.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/GPDK/gpdk045_v_6_0/gpdk045/../models/spectre/gpdk045.scs</modelfile>
+								<modelsection>"tt"</modelsection>
+							</model>
+						</models>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">labs_2025:VCO_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>labs_2025:VCO_tb:1_tmpstate.344738172_Interactive.29</value>
+							</option>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>LAB2026</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>labs_2025</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>tmpstate.344738172</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">vbias
+						<value>0.8</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Vc
+						<value>0.7</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">vdd
+						<value>1.8</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>Replace</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>4</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>1</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+			</checkpoint>
+			<timestamp>Nov 18 22:31:48 2025</timestamp>
+			<uuid>{bada83bf-101a-4cb2-bad1-8de5c19aab3e}</uuid>
+			<resultsname>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.29.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.29.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/cn98.it.auth.gr_atsiougk_223149014</localpsfdir>
+			<psfdir>/home/a/atsiougk/simulation/LAB2026/VCO_tb/adexl/results/data/Interactive.29</psfdir>
+			<simdir>$AXL_PROJECT_DIR/LAB2026/VCO_tb/adexl/results/data/Interactive.29</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.29.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.29.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.30
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">C0
+						<vars>
+							<var>Vc
+								<value>0:0.2:3.3</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">config.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/config.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">param.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/param.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">bip.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/bip.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">cap.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/cap.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">dio.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/dio.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">mos.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/mos.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">photo.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/photo.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">res.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/res.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">xh018.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/xh018.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="1">gpdk045.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/GPDK/gpdk045_v_6_0/gpdk045/../models/spectre/gpdk045.scs</modelfile>
+								<modelsection>"tt"</modelsection>
+							</model>
+						</models>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">labs_2025:VCO_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>labs_2025:VCO_tb:1_tmpstate.344738172_Interactive.30</value>
+							</option>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>LAB2026</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>labs_2025</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>tmpstate.344738172</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">vbias
+						<value>0.8</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Vc
+						<value>0.7</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">vdd
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>Replace</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>4</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>1</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+			</checkpoint>
+			<timestamp>Nov 18 22:32:29 2025</timestamp>
+			<uuid>{f99200a2-9817-4c5b-9e01-0f950569dbba}</uuid>
+			<resultsname>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.30.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.30.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/cn98.it.auth.gr_atsiougk_223229552</localpsfdir>
+			<psfdir>/home/a/atsiougk/simulation/LAB2026/VCO_tb/adexl/results/data/Interactive.30</psfdir>
+			<simdir>$AXL_PROJECT_DIR/LAB2026/VCO_tb/adexl/results/data/Interactive.30</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.30.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.30.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.31
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">C0
+						<vars>
+							<var>Vc
+								<value>0:0.2:3.3</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">config.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/config.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">param.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/param.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">bip.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/bip.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">cap.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/cap.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">dio.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/dio.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">mos.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/mos.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">photo.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/photo.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">res.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/res.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">xh018.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/xh018.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="1">gpdk045.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/GPDK/gpdk045_v_6_0/gpdk045/../models/spectre/gpdk045.scs</modelfile>
+								<modelsection>"tt"</modelsection>
+							</model>
+						</models>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">labs_2025:VCO_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>labs_2025:VCO_tb:1_tmpstate.344738172_Interactive.31</value>
+							</option>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>LAB2026</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>labs_2025</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>tmpstate.344738172</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">vbias
+						<value>0.8</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Vc
+						<value>0.7</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">vdd
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>Replace</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>4</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>1</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+			</checkpoint>
+			<timestamp>Nov 18 22:35:17 2025</timestamp>
+			<uuid>{f343229c-4d5a-4032-97d2-243bdab6a017}</uuid>
+			<resultsname>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.31.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.31.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/cn98.it.auth.gr_atsiougk_223517695</localpsfdir>
+			<psfdir>/home/a/atsiougk/simulation/LAB2026/VCO_tb/adexl/results/data/Interactive.31</psfdir>
+			<simdir>$AXL_PROJECT_DIR/LAB2026/VCO_tb/adexl/results/data/Interactive.31</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.31.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.31.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry assemblerOrExplorer="adexl" roOrView="view">Interactive.32
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">C0
+						<vars>
+							<var>Vc
+								<value>0:0.2:3.3</value>
+							</var>
+						</vars>
+						<models>
+							<model enabled="0">config.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/config.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">param.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/param.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">bip.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/bip.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">cap.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/cap.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">dio.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/dio.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">mos.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/mos.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">photo.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/photo.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">res.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/res.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="0">xh018.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/xfab/2020/XKIT/xh018/cadence/v8_0/spectre/v8_0_1/lpmos/xh018.scs</modelfile>
+								<modelsection></modelsection>
+							</model>
+							<model enabled="1">gpdk045.scs
+								<modeltest>All</modeltest>
+								<modelblock>Global</modelblock>
+								<modelfile>/mnt/apps/prebuilt/EDA/designkits/GPDK/gpdk045_v_6_0/gpdk045/../models/spectre/gpdk045.scs</modelfile>
+								<modelsection>"tt"</modelsection>
+							</model>
+						</models>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">labs_2025:VCO_tb:1
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>labs_2025:VCO_tb:1_tmpstate.344738172_Interactive.32</value>
+							</option>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>LAB2026</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>VCO_tb</value>
+							</option>
+							<option>lib
+								<value>labs_2025</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>tmpstate.344738172</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var enabled="1">vbias
+						<value>0.8</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">Vc
+						<value>0.3</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+					<var enabled="1">vdd
+						<value>1</value>
+						<dependentTests>
+							<dependentTest enabled="1" omitted="0">labs_2025:VCO_tb:1</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottingmode
+						<value>Append</value>
+					</plottingoption>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>useMaestroPlottingTemplate
+						<value>yes</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+					<plottingoption>allplottingtemplates</plottingoption>
+					<plottingoption>defaultplottingtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<sortVariableValues>0</sortVariableValues>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>4</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>1</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+			</checkpoint>
+			<timestamp>Nov 18 22:36:33 2025</timestamp>
+			<uuid>{2455ddca-47c6-461f-8589-ad26c9fb9942}</uuid>
+			<resultsname>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.32.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.32.rdb</simresults>
+			<rawdatadelstrategy>SaveAll
+				<simdatasavemode>All</simdatasavemode>
+			</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/cn98.it.auth.gr_atsiougk_223634084</localpsfdir>
+			<psfdir>/home/a/atsiougk/simulation/LAB2026/VCO_tb/adexl/results/data/Interactive.32</psfdir>
+			<simdir>$AXL_PROJECT_DIR/LAB2026/VCO_tb/adexl/results/data/Interactive.32</simdir>
+			<gendatasheetplotsonsimulation>0</gendatasheetplotsonsimulation>
+			<runlog>/home/a/atsiougk/prj/virtuoso-6.1.8-2022-23/LAB2026/VCO_tb/adexl/results/data/Interactive.32.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.32.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+	</history>
+</setupdb>

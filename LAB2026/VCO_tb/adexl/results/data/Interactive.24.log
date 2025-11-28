@@ -1,0 +1,16 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Tue Nov 18 22:26:01 2025 
+Best design point: 1
+Design specs: 
+	labs_2025:VCO_tb:1	corner	Nominal - 
+Design parameters: 
+	vbias		600m
+	Vc		950m
+	vdd		1.2
+
+Interactive.24
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.24 completed. 
+Current time: Tue Nov 18 22:26:06 2025 

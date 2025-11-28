@@ -1,0 +1,14 @@
+//Revision 2
+//NOTE
+// Default austriamicrosystems template for spectre
+//END_NOTE
+
+config CM_tb;
+design LAB2026.CM_tb:schematic;
+liblist myLib;
+
+viewlist spectre, cmos_sch, schematic, veriloga, ahdl;
+stoplist spectre;
+
+
+endconfig
