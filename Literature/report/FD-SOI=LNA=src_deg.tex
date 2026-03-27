@@ -1,0 +1,82 @@
+\textbf{Source degeneration.}
+	Consider an nMOS common source (CS) amplifier. The input of this amplifier is connected to the output of a system with output impedance $\symbb{R}\ni Z_0=R_0+j0$. In order to match the input impedance of the CS amplifier to $Z_0$, it is common to use two inductors \cite{CMOSRFIC}; one at the input of the CS amplifier, $L_G$, and one at the source of the nMOS, $L_S$ \cite{CMOSRFIC}. This technique is called \textsl{source degeneration} \cite{CMOSRFIC}. The inductive pair $L_G + L_S$ is used to resonate --at a specific frequncy, $\omega_T$-- the gate-source capacitance of the transistor, $C_{gs}$, and $L_S$ is used to bring the value of the input impedance closer to $Z_0$ \cite{CMOSRFIC}.\par
+
+	\cite{FDSOI2} uses source degeneration when the amplifier works in common mode \cite{FDSOI2} --that is when $v_{\symup{in}^{+}} = v_{\symup{in}^{-}}$-- in order to reduce common-mode gain. In this case, the voltage drop across $L_g$ is zero and a small-signal equivalent of the CS amplifier (figure \ref{fig:FDSOI:TRX:LNA:SOURCE_DEG:initial}) is shown in figure \ref{fig:FDSOI:TRX:LNA:SOURCE_DEG:equiv}. Assuming both transistors to be identical, the input impedance can be calculated as follows.
+
+	\begin{figure}[h!]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\centering
+		\begin{tikzpicture}[straight voltages]
+			\draw (-4.5, 2.25) -| (-3.608, 2.25);
+			\node[nmos, arrowmos, nogate, xscale=-1](N1) at (-1, 2.25){} node[anchor=east] at (N1.text){$\symup{M}_{12}$};
+			\node[nmos, arrowmos, nogate](N2) at (-3, 2.25){} node[anchor=west] at (N2.text){$\symup{M}_{11}$};
+			\draw (-2, 1.25) to[cute inductor, l={$L_{\symup{deg}}$}] (-2, -0);
+			\draw (-3, 1.48) -| (-3, 1.25) -- (-1, 1.25) -- (-1, 1.5);
+			\node[tlground] at (-2, -0){};
+			\node[ocirc] at (-3, 3.02){};
+			\node[ocirc] at (-1, 3.02){};
+			\node[circ] at (-3.75, 2.25){};
+			\draw (-3.98, 2.25) -- (-4.5, 2.25);
+			\node[tlground] at (-4.5, -0){};
+			\draw[-latex] (-4.5, 0.25) -- (-4.5, 2);
+			\node[shape=rectangle, minimum width=0.465cm, minimum height=0.715cm](N3) at (-4.25, 1.125){} node[anchor=center] at (N3.text){$v_{\symup{in}}$};
+			\draw[-latex] (-4.5, 2.25) -- (-4, 2.25);
+			\draw (-0.392, 2.25) -| (-0.25, 2.25) -- (-0.25, 3.75) -| (-3.75, 3.25) -| (-3.75, 2.25);
+			\node[shape=rectangle, minimum width=0.695cm, minimum height=0.465cm](N4) at (-4.115, 2.5){} node[anchor=center] at (N4.text){$i_{\symup{in}}$};
+			\node[circ] at (-2, 1.25){};
+			\node[ocirc] at (-4.5, 2.25){};
+		\end{tikzpicture}
+		\caption{}
+		\label{fig:FDSOI:TRX:LNA:SOURCE_DEG:initial}
+	\end{subfigure}
+	\bigskip
+	\begin{subfigure}{\linewidth}
+	\centering
+		\begin{tikzpicture}[straight voltages]
+			\draw (-2.75, 2.25) -- (-2.75, 1.75) -| (-1, 2.25);
+			\draw (-1, 3.25) to[capacitor, l_={$C_{gs}$}] (-1, 2.25);
+			\draw (-2.75, 3.25) to[american controlled current source, l_={$g_{m} v_{gs}$}] (-2.75, 2.25);
+			\draw[-latex] (-0.25, 2.25) -- (-0.25, 3.25);
+			\node[shape=rectangle, minimum width=0.465cm, minimum height=0.465cm](N1) at (0, 2.75){} node[anchor=center] at (N1.text){$v_{gs}$};
+			\draw (-2.75, 3.75) -| (-2.75, 3.25);
+			\draw (-1, 3.25) -- (-1, 3.75) -| (0, 3.75) -| (1, 3.75) -- (1, 3.25);
+			\draw (1, 3.25) to[capacitor, l={$C_{gs}$}] (1, 2.25);
+			\draw (2.75, 3.25) to[american controlled current source, l={$g_{m} v_{gs}$}] (2.75, 2.25);
+			\draw (1, 2.25) -| (1, 1.75) -| (2.75, 2.25);
+			\node[circ] at (1.75, 1.75){};
+			\draw (2.75, 3.75) -| (2.75, 3.25);
+			\node[ocirc] at (-2.75, 3.75){};
+			\node[ocirc] at (2.75, 3.75){};
+			\node[circ] at (-0, 3.75){};
+			\draw (-0, 3.75) -| (-0, 4.25);
+			\node[ocirc](N2) at (-0, 4.25){} node[anchor=south] at (N2.north){$v_{\symup{in}}$};
+			\draw (-0, 1.25) to[cute inductor, l={$L_{\symup{deg}}$}] (-0, -0);
+			\node[tlground] at (-0, -0){};
+			\node[circ] at (-0, 1.25){};
+			\draw[-latex] (0.25, 3.75) -- (0.75, 3.75);
+			\node[shape=rectangle, minimum width=0.695cm, minimum height=0.465cm](N3) at (0.5, 4){} node[anchor=center] at (N3.text){$\nicefrac{i_{\symup{in}}}{2}$};
+			\node[shape=rectangle, minimum width=0.695cm, minimum height=0.465cm](N4) at (-0.5, 4){} node[anchor=center] at (N4.text){$\nicefrac{i_{\symup{in}}}{2}$};
+			\draw[-latex] (-0.25, 3.75) -- (-0.75, 3.75);
+			\draw[-latex] (-2.75, 1.75) -- (-2.25, 1.75);
+			\node[shape=rectangle, minimum width=0.33cm, minimum height=0.465cm](N5) at (-2.5, 1.5){} node[anchor=center] at (N5.text){$i_{d}$};
+			\draw[-latex] (2.75, 1.75) -- (2.25, 1.75);
+			\node[shape=rectangle, minimum width=0.33cm, minimum height=0.465cm](N6) at (2.5, 1.5){} node[anchor=center] at (N6.text){$i_{d}$};
+			\node[circ] at (-1.75, 1.75){};
+			\draw (-1.75, 1.75) -- (-1.75, 1.25) -| (1.75, 1.75);
+		\end{tikzpicture}
+		\caption{}
+		\label{fig:FDSOI:TRX:LNA:SOURCE_DEG:equiv}
+	\end{subfigure}
+	\caption{Inductive \textsl{source degeneration} for input impedance matching and common-mode gain reduction. Figure \ref{fig:FDSOI:TRX:LNA:SOURCE_DEG:equiv} shows the small signal equivalent of figure \ref{fig:FDSOI:TRX:LNA:SOURCE_DEG:initial}.}
+	\label{fig:FDSOI:TRX:LNA:SOURCE_DEG}
+	\end{figure}
+
+	\begin{align*}
+		v_{\symup{in}} &= \frac{1}{s C_{gs}}\cdot\frac{i_{\symup{in}}}{2} + s L_{\symup{deg}}\left( i_{\symup{in}} + 2g_m v_{gs} \right)\\
+		\Rightarrow v_{\symup{in}} &= i_{\symup{in}}\left[ s L_{\symup{deg}} + \frac{1}{2 s C_{gs}} \right] + i_{\symup{in}} g_m\frac{L_{\symup{deg}}}{C_{gs}}\\
+		\Rightarrow Z_{\symup{in}} &=  s L_{\symup{deg}} + \frac{1}{2 s C_{gs}} + g_m\frac{L_{\symup{deg}}}{C_{gs}}
+	\end{align*}
+	$\RE{\left( Z_{\symup{in}} \right)} = g_m L_{\symup{deg}} C_{gs}^{-1}$; $L_{\symup{deg}}$ can be tuned to synthesize the real part of the input impedance.\par
+
+	As mentioned above, in common-mode, $L_{\symup{deg}}$ is significant to reducing common-mode gain. For a matched differential common-source pair with mismatched load or a differential pair with mismatched transconductance the common mode gain, $A_{\symup{CM}}$, is, according to \cite{SedraSmith}, inversely proportional to $Z_{s}$. In this case $Z_s=s L_{\symup{deg}}$, where $s=j\omega$, and as the frequency increases, so does $\left\| Z_s \right\|=\omega L_{\symup{deg}}$ reducing $A_{\symup{CM}}$ and hence, increasing common-mode rejection ratio.\par

@@ -1,0 +1,47 @@
+\input{preamble.tex}
+
+\begin{document}
+\markboth{[116]~Design~of~VLSI~Systems,~January~2026}{Group 02}
+
+\title{[116] Design of VLSI Systems: Literature Report on FinFET and FD-SOI Technologies}
+\author{
+	\vfill{Group~02:~Antonios~KAPETANIOS~[10417],~\and~Panagiotis~PAPADOPOULOS~[10697]}\vfill
+	\begin{center}
+		{Aristotle University of Thessaloniki --- Faculty of Engineering\\
+		Department of Electrical and Computer Engineering}
+	\end{center}
+}
+
+	\NiceMatrixOptions{cell-space-limits = 2pt}
+	\renewcommand{\arraystretch}{1.2}
+
+	\maketitle
+
+	\renewcommand{\arraystretch}{1.75}
+
+	\begin{abstract}
+		The purpose of this report is to briefly present and discuss FinFET and FD-SOI (Fully Depleted-Silicon On Insulator) devices. Four articles --published within the last two years-- were chosen to be discussed; \cite{FinFET1} and \cite{FinFET2} focus on FinFET devices, whereas \cite{FDSOI1} and \cite{FDSOI2} focus on devices in FD-SOI 22nm technology.
+	\end{abstract}
+
+	\section{Introduction}
+		\IEEEPARstart{T}{he} continuous scaling of planar MOSFET structure on bulk silicon has been crucial to the evolution of VLSI \cite{Fossum_Trivedi_2013}. However, scaling has proven the long-channel transistor model to be insufficient \cite{Brennan_2005} as short-channel effects (SCEs) dominate \cite{Fossum_Trivedi_2013}\cite{Brennan_2005}. According to \cite{Fossum_Trivedi_2013} the most prominent candidates offering sufficient control over SCEs are FinFET and FD-SOI devices.\par
+
+		Short channel effects (SCEs) are the effects, caused by scaling, that affect the device's behavior and intrinsic properties \cite{Brennan_2005}. Such effects are \textsl{charge sharing},  \textsl{drain-induced barrier lowering (DIBL)}, \textsl{carrier-velocity saturation}, and \textsl{hot carrier injection into the oxide} \cite{Brennan_2005} among others. These effects are explained below.\par
+
+		The articles chosen to be discussed in this report mainly focus on the drain-voltage's influence on threshold voltage, $V_{\symup{th}}$, \cite{MOSFETArora}. \textbf{Drain-induced barrier lowering} (DIBL) occurs when the depletion layer formed around the drain begins to interact with the source-channel junction \cite{YangMicroelectronics}. Specifically, the surface potential near the source is lowered \cite{MOSFETArora} allowing electrons to be injected into the channel regardless of the voltage applied to the gate \cite{YangMicroelectronics}.
+
+		When in the subthreshold region --that is $\left| V_{g} \right| \lneqq \left| V_{\symup{th}} \right|$-- and voltage is applied to the drain, then the drain current starts increasing \cite{FDSOICMOS}. When $V_{g}=0\unit{\volt}$ the drain current is not zero \cite{FDSOICMOS}\cite{KURINEC20015461}\cite{AGARWAL202381}\cite{FjeldlyVthModeling}. This non-zero drain current when the device should be ``off'' ($V_{g}=0\unit{\volt}$) is called \textsl{leakage current} and in VLSI it can increase significantly power dissipation \cite{KURINEC20015461}\cite{AGARWAL202381}.\par
+
+	   The scaling of transistors without reduction in supply voltages results in strong electric field in the channel \cite{Brennan_2005} which affects carrier mobility \cite{YangMicroelectronics}. Carriers gain energy and their collision with the crystal structure (of Si) limits their velocity \cite{YangMicroelectronics}. \textbf{Carrier-velocity saturation} leads to transconductance, $g_m$, reduction \cite{YangMicroelectronics}. Lowering $g_m$ leads to reduced intrinsic voltage gain $A_v=g_m r_{ds}=\nicefrac{g_m}{g_{ds}}$ \cite{SedraSmith}\cite{nazarov_functional_2014}.\par
+
+		In section \ref{section:FinFET} the operation principle of FinFETs and how they overcome certain SCEs are presented. Finally, \cite{FinFET1} and \cite{FinFET2} are discussed. In section \ref{section:FDSOI} the operation principle of FD-SOI devices and how they overcome certain SCEs are presented. Finally, \cite{FDSOI1} and \cite{FDSOI2} are discussed with emphasis on their circuits.\par
+
+	\input{FinFET.tex}
+	\input{FD-SOI}
+
+	\ifCLASSOPTIONcaptionsoff
+		\newpage
+	\fi
+
+	\printbibliography
+\end{document}

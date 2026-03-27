@@ -1,0 +1,48 @@
+\begin{tikzpicture}
+	% Paths, nodes and wires:
+	\draw (-2.98, 3.27) -- (-2.48, 3.27);
+	\draw (-1.5, -0.04) -- (-1.5, -0.29);
+	\draw (1.5, -0.04) -- (1.5, -0.29);
+	\path[draw={rgb,255:red,63;green,63;blue,63}, dash pattern={on 1.6pt off 1.6pt}, latex-latex] (-2.625, 1.21) -- (-0.75, 0.335);
+	\node[nmos, arrowmos, xscale=-1](N1) at (-2.98, -0.04){} node[anchor=east] at (N1.text){$\symup{M}_{11}$};
+	\node[nmos, arrowmos](N2) at (2.98, -0.04){} node[anchor=west] at (N2.text){$\symup{M}_{12}$};
+	\node[nmos, arrowmos](N3) at (2.98, 2.5){} node[anchor=west] at (N3.text){$\symup{M}_{22}$};
+	\node[nmos, arrowmos, xscale=-1](N4) at (-2.98, 2.5){} node[anchor=east] at (N4.text){$\symup{M}_{21}$};
+	\draw (-2, 2.5) -- (2, 2.5);
+	\node[vcc](N5) at (0, 4.5){} node[anchor=south] at ([yshift=-0.12cm]N5.text){$V_{\symup{DD}}$};
+	\draw (-2, -0.04) to[cute inductor, inductors/width=1.5, inductors/coils=10, l_={$L_g$}] (2, -0.04);
+	\node[ocirc](N6) at (-1.5, -0.29){} node[anchor=north] at ([yshift=0.04cm]N6.south){$v_{\symup{in}^{+}}$};
+	\node[ocirc](N7) at (1.5, -0.29){} node[anchor=north] at ([yshift=0.04cm]N7.south){$v_{\symup{in}^{-}}$};
+	\node[circ, yscale=-1] at (-0, 0.17){};
+	\node[circ] at (-1.5, -0.04){};
+	\node[circ] at (1.5, -0.04){};
+	\draw (-0, -1.54) to[cute inductor, l={$L_{\symup{deg}}$}] (-0, -2.54);
+	\draw (-2.98, -0.81) |- (-2.75, -1.29) -- (2.5, -1.29) -| (2.98, -0.81);
+	\draw (-0, -1.54) -| (-0, -1.29);
+	\node[circ] at (-0, -1.29){};
+	\draw (-0, -2.54) -| (-0, -2.79);
+	\node[tlground] at (-0, -2.79){};
+	\node[tlground] at (-0, -2.79){};
+	\draw (-2.98, 1.73) to[cute inductor, l_={$L_{dl}$}] (-2.98, 0.73);
+	\node[circ, xscale=0.75, yscale=0.75] at (-2.625, 0.835){};
+	\node[circ, xscale=0.75, yscale=0.75] at (-1.125, 0.335){};
+	\draw (2.98, 0.73) to[cute inductor, l_={$L_{dr}$}] (2.98, 1.73);
+	\node[circ, xscale=-0.75, yscale=-0.75] at (2.625, 1.625){};
+	\path[draw={rgb,255:red,63;green,63;blue,63}, dash pattern={on 1.6pt off 1.6pt}, latex-latex] (-2.625, 1.585) -- (2.5, 1.585);
+	\node[shape=rectangle, fill={rgb,255:red,255;green,255;blue,255}, minimum width=0.34cm, minimum height=0.235cm](N8) at (-0, 1.595){} node[anchor=center] at (N8.text){\textcolor{rgb,255:red,63;green,63;blue,63}{$k_2$}};
+	\node[shape=rectangle, fill={rgb,255:red,255;green,255;blue,255}, minimum width=0.34cm, minimum height=0.34cm](N9) at (-1.688, 0.773){} node[anchor=center] at (N9.text){\textcolor{rgb,255:red,63;green,63;blue,63}{$k_1$}};
+	\path[draw={rgb,255:red,63;green,63;blue,63}, dash pattern={on 1.6pt off 1.6pt}, latex-latex] (0.75, 0.335) -- (2.625, 1.21);
+	\node[shape=rectangle, fill={rgb,255:red,255;green,255;blue,255}, minimum width=0.34cm, minimum height=0.34cm](N10) at (1.688, 0.773){} node[anchor=center] at (N10.text){\textcolor{rgb,255:red,63;green,63;blue,63}{$k_1$}};
+	\node[ocirc](N11) at (-2.48, 3.27){} node[anchor=west] at ([xshift=-0.04cm]N11.east){$v_{\symup{out}^{-}}$};
+	\node[circ] at (-2.98, 3.27){};
+	\draw (2.48, 3.27) -- (2.98, 3.27);
+	\node[ocirc](N12) at (2.48, 3.27){} node[anchor=east] at ([xshift=0.04cm]N12.west){$v_{\symup{out}^{+}}$};
+	\node[circ] at (2.98, 3.27){};
+	\draw (-1.25, 4.29) to[cute inductor, inductors/width=1.5, inductors/coils=10, l_={$L_{\symup{out}}$}] (1.25, 4.29);
+	\draw (2.98, 3.27) |- (1.25, 4.29);
+	\draw (-2.98, 3.27) |- (-1.25, 4.29);
+	\node[circ] at (0, 4.5){};
+	\node[circ] at (-0, 2.5){};
+	\node[vcc](N13) at (-0, 0.17){} node[anchor=south] at ([yshift=-0.12cm]N13.text){$V_{\symup{CS}}$};
+	\node[vcc](N14) at (0, 2.5){} node[anchor=south] at ([yshift=-0.12cm]N14.text){$V_{\symup{CG}}$};
+\end{tikzpicture}

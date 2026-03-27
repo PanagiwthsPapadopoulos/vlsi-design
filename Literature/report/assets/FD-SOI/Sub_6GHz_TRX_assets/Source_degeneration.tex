@@ -1,0 +1,45 @@
+\begin{figure*}[h]
+\centering
+\begin{subfigure}{0.45\columnwidth}
+    \centering
+    \begin{tikzpicture}[straight voltages]
+        \node[nmos, arrowmos] at (8, 6){};
+        \draw (8, 5.5) to[cute inductor, l={$L_S$}] (8, 4);
+        \draw (5, 6) to[cute inductor, l={$L_G$}, i=$i_{\symup{in}}$] (7.02, 6);
+        \node[tlground] at (8, 4){};
+        \draw (8, 6.77) to[short, i<=$i_{d}$] (8, 7.5);
+        \node[ocirc](N1) at (8, 7.5){} node[anchor=south] at (N1.text){$\symup{out}$};
+        \node[ocirc](N2) at (5, 6){} node[anchor=east] at (N2.west){$\symup{in}$};
+        \node[tlground] at (5, 4){};
+        \draw (5,4) to[open,v^={$v_\symup{in}$}] (N2);
+        \draw (7,6) to[european voltages, open,v_=$V_{gs}$] (8, 5.25);
+    \end{tikzpicture}
+    \caption{}
+    \label{fig:FDSOI:TRX:LNA:SOURCE_DEG:initial}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.45\columnwidth}
+    \centering
+    \begin{tikzpicture}[straight voltages]
+        % Paths, nodes and wires:
+        \draw (13, 4) to[cute inductor, l={$L_S$}, v_>=$i_{d}+i_{\symup{in}}$] (13, 2.5);
+        \draw (9, 6) to[cute inductor, l={$L_G$}] (11, 6) to[capacitor, i=$i_\symup{in}$, l={$C_{gs}$}, v=$V_{gs}$] (11, 4.5) -| (11, 4) -- (13, 4) -| (13, 4.5);;
+        \node[ocirc](N1) at (9, 6){} node[anchor=east] at (N1.west){$\symup{in}$};
+        \node[tlground] at (13, 2.5){};
+        \draw (13, 5.5) to[european controlled current source, l={$g_m V_{gs}$}] (13, 4.5);
+        \draw (15, 5.75) to[american resistor, l={$r_{ds}$}] (15, 4.25);
+        \draw (13, 5.5) -| (13, 6) -| (15, 5.75);
+        \draw (15, 4.25) |- (13, 4);
+        \draw (15, 6) to[short, i<=$i_d$] (16, 6);
+        \node[circ] at (15, 6){};
+        \node[circ] at (13, 4){};
+        \node[ocirc](N2) at (16, 6){} node[anchor=west] at (N2.text){$\symup{out}$};
+        \node[tlground] at (9, 2.5){};
+        \draw (9, 2.5) to[open,v_=$v_{\symup{in}}$] (N1);
+    \end{tikzpicture}
+    \caption{}
+    \label{fig:FDSOI:TRX:LNA:SOURCE_DEG:equiv}
+\end{subfigure}
+\caption{Input impedance matching through \textsl{source degeneration}. Figure \ref{fig:FDSOI:TRX:LNA:SOURCE_DEG:equiv} shows the small signal equivalent of figure \ref{fig:FDSOI:TRX:LNA:SOURCE_DEG:initial}.}
+\label{fig:FDSOI:TRX:LNA:SOURCE_DEG}
+\end{figure*}

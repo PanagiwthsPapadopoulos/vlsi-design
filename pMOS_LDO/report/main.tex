@@ -1,0 +1,31 @@
+\input{preamble}
+
+\begin{document}
+	\input{titlepage}
+	% \clearpage
+	\thispagestyle{plain}
+	% \mbox{}
+	\clearpage
+	\pagenumbering{roman}
+	\renewcommand{\contentsname}{Περιεχόμενα}
+	\tableofcontents
+	% \clearpage
+	% \thispagestyle{empty}
+	% \mbox{}
+	\clearpage
+	\pagenumbering{arabic}
+
+	\input{intro.tex}
+	\clearpage
+	\clearpage
+	\input{error_amplifier.tex}
+	\clearpage
+	\input{ldo.tex}
+	\clearpage
+	\input{layout.tex}
+	\clearpage
+
+	\clearpage
+	\printbibliography[title={Αναφορές}]
+	\addcontentsline{toc}{section}{\textbf{Αναφορές}}
+\end{document}

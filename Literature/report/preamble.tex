@@ -1,0 +1,35 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[paper=letterpaper, textwidth=18.59cm, textheight=25cm, includehead]{geometry}
+\usepackage[style=ieee]{biblatex}
+\addbibresource{references.bib}
+\ifCLASSINFOpdf
+  \usepackage[pdftex]{graphicx}
+\else
+  \usepackage[dvips]{graphicx}
+\fi
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amsxtra,mathtools,xfrac,nicefrac,siunitx,stmaryrd,cancel,relsize,steinmetz,braket,nicematrix}
+\usepackage[math-style=ISO]{unicode-math}
+\usepackage{etoolbox, array, float, subcaption, subfloat}
+\usepackage{xcolor-material}
+\usepackage{tikz, circuitikz}
+\usetikzlibrary{arrows.meta, positioning}
+\usepackage[luatex,hidelinks,%
+			      pdfauthor={Antonios KAPETANIOS, Panagiotis PAPADOPOULOS},%
+			      pdftitle={116 Design of VLSI Systems},%
+			      pdfsubject={FinFET \& FD-SOI Technologies},%
+			      pdfkeywords={FinFET, FD-SOI, VLSI}]{hyperref}
+\makeatletter
+\patchcmd{\@makecaption}
+  {\scshape}
+  {}
+  {}
+  {}
+\makeatother
+
+\newcommand{\RE}{\mathop{\symfrak{Re}}\nolimits}
+\newcommand{\IM}{\mathop{\symfrak{Im}}\nolimits}
+
+\DeclareSIUnit{\decade}{\symup{dec}}
+
+% \usepackage{pgfplots}
+% \pgfplotsset{compat=1.17}

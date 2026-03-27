@@ -1,0 +1,39 @@
+\begin{tikzpicture}
+	% Paths, nodes and wires:
+	\draw (-2, 0.5) to[american controlled current source, l={$g_{m}v_{gs}$}] (-2, -1.5);
+	\draw (0, 0.5) to[american resistor, l={$g_{sd}$}] (0, -1.5);
+	\draw (2, 0.5) to[american controlled current source, l={$g_{mb}v_{bs}$}] (2, -1.5);
+	\draw (0, 1.5) to[capacitor, l={$C_{gb}$}] (2, 1.5);
+	\draw (-3.833, -2.5) to[capacitor, l={$C_{gs}$}] (-2.167, -2.5);
+	\draw (2.167, -2.5) to[capacitor, l={$C_{bs}$}] (3.833, -2.5);
+	\draw (-3.833, 2.5) to[capacitor, l={$C_{gd}$}] (-2.167, 2.5);
+	\draw (2.167, 2.5) to[capacitor, l={$C_{bd}$}] (3.833, 2.5);
+	\draw (-3.833, 2.5) -- (-4, 2.5) -| (-4, -2.5) -- (-3.833, -2.5);
+	\draw (3.833, 2.5) -- (4, 2.5) -| (4, -2.5) -- (3.833, -2.5);
+	\draw (-4, 1.5) -- (0, 1.5);
+	\draw (2, 1.5) -- (4, 1.5);
+	\draw (-2, 0.5) -- (-2, 2.5);
+	\draw (-2, -1.5) -| (-2, -2.5);
+	\draw (0, -1.5) -| (0, -2.5);
+	\draw (0, 0.5) -- (0, 2.5);
+	\draw (2, 0.5) -- (2, 2.5);
+	\draw (2, -1.5) -| (2, -2.5);
+	\draw (-2.167, -2.5) -- (2.167, -2.5);
+	\draw (2.167, 2.5) -- (-2.167, 2.5);
+	\node[circ] at (-2, 2.5){};
+	\node[circ] at (0, 2.5){};
+	\node[circ] at (2, 2.5){};
+	\node[circ] at (4, 1.5){};
+	\node[circ] at (-4, 1.5){};
+	\node[circ] at (-2, -2.5){};
+	\node[circ] at (0, -2.5){};
+	\node[circ] at (2, -2.5){};
+	\draw (-4, 1.5) -- (-5, 1.5);
+	\draw (0, 2.5) -| (0, 3.5);
+	\draw (0, -2.5) -| (0, -3.5);
+	\draw (4, 1.5) -- (5, 1.5);
+	\node[ocirc](N1) at (-5, 1.5){} node[anchor=east] at (N1.west){$G$};
+	\node[ocirc](N2) at (5, 1.5){} node[anchor=west] at (N2.east){$B$};
+	\node[ocirc](N3) at (0, 3.5){} node[anchor=south] at (N3.north){$D$};
+	\node[ocirc](N4) at (0, -3.5){} node[anchor=north] at (N4.south){$S$};
+\end{tikzpicture}

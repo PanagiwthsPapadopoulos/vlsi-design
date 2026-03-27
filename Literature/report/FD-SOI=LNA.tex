@@ -1,0 +1,75 @@
+\subsection{Sub $6\unit{\giga\hertz}$ transceiver front-end in $22$-$\unit{\nano\meter}$ FD-SOI CMOS}
+
+	The final article discussed, \cite{FDSOI2}, proposes a highly integrated sub-$6\unit{\giga\hertz}$ --specifically, $f_{\symup{RF}}\in \left[ 1.25\unit{\giga\hertz}, 5.5\unit{\giga\hertz} \right]$-- tranceiver (TRx) front-end for cellular base stations. The IC is fabricated using 22nm FD-SOI technology. In order to meet the application requirements while using on-chip power amplifiers, the authors chose to use a $12.5\unit{\ohm}$ impedance. The advantage of using a low impedance is that it allows for low-voltage power amplification, since $P_{\symup{diss}}={V^2}{Z^{-1}}$. However, low input impedance --in the Rx front-end-- reduces the input voltage; hence, the targeted noise figure is harder to reach and a higher supply voltage is needed for the LNA \cite{FDSOI2}. The proposed IC is shown in figure \ref{fig:FDSOI:TRX:system}.\par
+
+	The integrated part of the transmitter (Tx) consists of two pre-power-amplifier (PPA1 and PPA2) stages with variable gain and a power amplifier (PA). Additionally, the RF input signal is translated to baseband, filtered through a low-pass filter (LPF) and it is translated again to $f_{\symup{RF}}$ before it is substracted from the output signal of the first pre-power-amplifier stage (PPA1); the LP filter is in parallel to PPA1 (see figure \ref{fig:FDSOI:TRX:system}). The LPF is necessary for suppressing any intermodulation products that occur from the RF digital to analog converter's (DAC) clock --preceding PPA1 and not shown in figure \ref{fig:FDSOI:TRX:system}-- and the signals \cite{FDSOI2}.
+
+	The integrated part of the receiver (Rx) consists of a low noise amplifier (LNA), followed by a variable gain amplifier (VGA), a three-frequency-band equalizer and finally a buffer. There is also a switch connected to the antenna array used for enabling either the Tx or Rx.\par
+
+	It is important to note that both the Rx and Tx feature no frequency translation (except for the LPF); hence, all the amplifiers require wide bandwidth. Finally, all amplifiers in figure \ref{fig:FDSOI:TRX:system} are fully differential.\par
+
+	\begin{figure}[htb]
+		\centering
+		\includegraphics[width=\linewidth]{assets/FD-SOI/Sub_6GHz_TRX_assets/system.pdf}
+			\caption{Simplified schematic of the proposed integrated tranceiver \cite{FDSOI2}.}
+		\label{fig:FDSOI:TRX:system}
+	\end{figure}
+
+	\subsubsection{Noise factor} To better understand device-related noise, a means to quantify the device-added noise is needed. Let $G$ be the gain of an amplifier, $\symcal{S}_{\symup{in}}$, $\symcal{S}_{\symup{out}}$, $\symcal{N}_{\symup{in}}$ and $\symcal{N}_{\symup{out}}$ the power of the input signal, the power of the output signal, the power of the input noise and the power of the output noise, respectively. The ratio of the input SNR (signal-to-noise ratio), $\symup{SNR}_{\symup{in}}$, to the output SNR, $\symup{SNR}_{\symup{out}}$, is called \textsl{noise factor}.
+	\begin{equation}
+		\label{eq:noise_factor_definition}
+		\symup{F}=\frac{\symup{SNR}_{\symup{in}}}{\symup{SNR}_{\symup{out}}}
+	\end{equation}
+	However, in practice \textsl{noise figure} is preferred over noise factor for characterizing a device. Noise figure, $\symup{NF}$, is the noise factor expressed in decibels; $\symup{NF}=10\log_{10}{\left(\symup{F}\right)}$ \cite{frenzel2015principles}.
+
+	Some of the most prominent sources of device-added noise are resistors (thermal noise) and active devices \cite{RFICRogers}. We will prove that the noise factor of any real device is greater than unity. To do this we begin from the definition of noise factor in equation \eqref{eq:noise_factor_definition}.
+	\begin{align*}
+		& \symup{F} = \frac{\symup{SNR}_{\symup{in}}}{\symup{SNR}_{\symup{out}}} \Rightarrow\\
+		& \symup{F} = \frac{\symcal{S}_{\symup{in}}}{\symcal{N}_{\symup{in}}} \cdot \frac{\symcal{N}_{\symup{out}}}{\symcal{S}_{\symup{out}}} \Rightarrow\\
+		& \symup{F} = \frac{\symcal{S}_{\symup{in}}}{\symcal{N}_{\symup{in}}} \cdot \frac{G\cdot \symcal{N}_{\symup{in}} + \symcal{N}_{\symup{device}}}{G\symcal{S}_{\symup{in}}} \Rightarrow\\
+		& \symup{F} = 1 + \frac{\symcal{N}_{\symup{device}}}{G\cdot \symcal{N}_{\symup{in}}} \gneqq 1,
+	\end{align*}
+	since $\symcal{N}_{\symup{device}}\gneqq 0$ for all real devices.
+
+	\subsubsection{Low noise amplifier (LNA)}
+
+		Low noise amplifiers (LNAs) are quite often the first component, after the antenna, in the Rx chain and that is because the noise figure/factor of the first subsystem dominates the system's total noise figure/factor \cite{frenzel2015principles}. This is apparent in the expression of the noise factor of system comprising of $N$ cascaded subsystems, each with gain $G_j$:
+		\begin{equation}
+			\label{eq:cascode_noise_factor}
+			F_{\symup{tot}}=F_1+\sum_{i=2}^{N}{\frac{F_i-1}{\prod_{j=1}^{i-1}{G_j}}}
+		\end{equation}
+
+		\begin{figure}[ht!]
+			\centering
+			\include{assets/FD-SOI/Sub_6GHz_TRX_assets/LNA}
+			\caption{LNA schematic with transformer feedback presented in \cite{FDSOI2}. $\symup{M}_{11}$ and $\symup{M}_{12}$ are identical. $\symup{M}_{21}$ and $\symup{M}_{22}$ are identical.}
+			\label{fig:FDSOI:TRX:LNA}
+		\end{figure}
+
+		The noise factor of cascode MOSFET pair, where the transistor in common-source (CS) topology acts as the input transistor, is inversely proportional to the input transistor's transconductance, $g_{m,\symup{CS}}$, \cite{Adaptive2008}. Hence, the noise factor can be reduced by increasing the input transconductance \cite{FDSOI2} \cite{Adaptive2008}. The LNA schematic of \cite{FDSOI2} is shown in figure \ref{fig:FDSOI:TRX:LNA}. It is a fully differential amplifier; that is both the input and output are differential. The input comprises of a CS differential pair of nMOSFETs and the output comprises of a common gate (CG) differential pair of nMOSFETs.\par
+
+		The cascode transistors, $\symup{M}_{21}$ and $\symup{M}_{22}$, improve isolation between the input and output ports of the amplifier \cite{RFICRogers}. In order to synthesize a real impedance at the output node of the LNA an inductor, $L_{\symup{out}}$, is placed between the node and the voltage supply, $V_{\symup{DD}}$. $L_{\symup{out}}$ resonates, at a specific frequency, with the total equivalent capacitance at the output node introduced by $\symup{M}_{2x}$; hence, matching with the following stage  in the Rx chain is achieved.\par
+		Two important techniques are used by the authors of \cite{FDSOI2}; the first one is \textsl{reactive series-shunt feedback} and the second one is \textsl{source degeneration}. Both of these techniques are explained in detail in the following paragraphs.\par
+
+		\input{FD-SOI=LNA=src_deg.tex}
+
+		\input{FD-SOI=LNA=transformer_feedback.tex}
+
+		Figure \ref{fig:FDSOI:TRX:IC} shows a photograph of the fabricated integrated circuit. The ratios of the LNA's input-transistors and the ratios of the output-transistors are $S_{1x}$ and $S_{2x}$, respectively.
+		\begin{align*}
+			&S_{1x}=\frac{W_{1x}}{L_{1x}}=\frac{0.9\unit{\milli\meter}}{28\unit{\nano\meter}}\approxeq 32,142.\overline{857\ 142}\\
+			&S_{2x}=\frac{W_{2x}}{L_{2x}}=\frac{0.8\unit{\milli\meter}}{150\unit{\nano\meter}}\approxeq 5,333.\overline{3}
+		\end{align*}
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.7\linewidth]{assets/FD-SOI/Sub_6GHz_TRX_assets/IC.png}
+			\caption{Photograph of the fabricated IC \cite{FDSOI2}.}
+			\label{fig:FDSOI:TRX:IC}
+		\end{figure}
+
+		\begin{figure*}[ht!]
+			\centering
+			\include{assets/FD-SOI/Sub_6GHz_TRX_assets/reactive_feedbacK_small_signal.tex}
+			\caption{Small signal equivalent of figure \ref{fig:FDSOI:TRX:LNA} with reactive series-shunt feedback. Transistors $\symup{M_{21}}$ and $\symup{M_{22}}$ are omitted from the model for clarity.}
+			\label{fig:FDSOI:TRX:LNA_REACTIVE_FEEDBACK}
+		\end{figure*}

@@ -1,0 +1,41 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[portrait,textwidth=14cm,top=2cm,bottom=2.5cm,includeheadfoot]{geometry}
+\usepackage[main=greek, english]{babel}
+\usepackage[language=greek, bibencoding=utf8, backend=biber, style=ieee]{biblatex}
+\addbibresource{references.bib}
+\usepackage{amsmath, amsthm, amsfonts, amssymb, amsxtra, mathtools, xfrac, nicefrac, siunitx, stmaryrd, cancel, relsize, steinmetz, braket, nicematrix, physics}
+\usepackage[libertinus]{fontsetup}
+\usepackage{etoolbox, array, float, subcaption, subfloat, enumitem, fancyhdr, indentfirst, rotating, pdflscape}
+\usepackage{xcolor-material}
+\usepackage{tikz, circuitikz}
+\usepackage{ctable}
+\usetikzlibrary{arrows.meta, positioning}
+\usepackage[luatex,hidelinks,%
+			pdfauthor={Αντώνιος ΚΑΠΕΤΑΝΙΟΣ, Παναγιώτης ΠΑΠΑΔΟΠΟΥΛΟΣ,},%
+			pdftitle={LDO με pMOS Pass Element},%
+			pdfkeywords={VLSI, LDO, pMOS}]{hyperref}
+\captionsetup{font=small,labelfont=bf}\numberwithin{equation}{section}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+\renewcommand{\arraystretch}{1.4}
+
+%--- chapter heading
+
+\fancypagestyle{fancy}{
+	\fancyhf{}
+	\fancyfoot[LE,RO]{\thepage}
+	\fancyfoot[RE,LO]{116 --- Σχεδίαση Συστημάτων VLSI: Ομάδα 02}
+	\renewcommand{\footrule}{\hbox to \headwidth{\color{gray}\leaders\hrule height \footrulewidth\hfill}}
+	\renewcommand{\footrulewidth}{0.2pt}
+}
+
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyfoot[LE,RO]{\thepage}
+	\renewcommand{\footrule}{\hbox to \headwidth{\color{gray}\leaders\hrule height \footrulewidth\hfill}}
+	\renewcommand{\footrulewidth}{0.2pt}
+}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}

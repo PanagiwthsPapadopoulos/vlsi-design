@@ -1,0 +1,26 @@
+\section{Fully Depleted-Silicon on Insulator (FD-SOI)}\label{section:FDSOI}
+
+	\subsection{Technology overview}
+		MOSFET scaling, need for power consumption reduction, and short-channel effects (SCEs) (due to scaling) led to exploration of new planar architectures. One such structure tackling the above is silicon on insulator (SOI) \cite{Fossum_Trivedi_2013}\cite{FDSOICMOS}. Fully depleted-silicon on insulator (FD-SOI) devices are a subclass of SOI devices \cite{Fossum_Trivedi_2013}\cite{FDSOICMOS}. SOI devices consist of a silicon layer on top of a silicon oxide called \textsl{burried oxide} (BOX) --formed as a single crystal-- and a Si substrate beneath the BOX \cite{FDSOICMOS}.\par
+
+		The Si-film beneath the gate --often referred to as \textsl{body}-- is depleted of free carriers; hence, the name \textsl{fully depleted-silicon on insulator} \cite{Fossum_Trivedi_2013}\cite{FDSOICMOS}\cite{NYSSENS202433}. Figure \ref{fig:FDSOI:CMOS} shows the cross-section of a CMOS pair on p-substrate in $28\unit{\nano\meter}$ UTBB FD-SOI CMOS process, where insulator is used to isolate nMOSFETS from pMOSFETS. UTBB stands for \textsl{ultra-thin body and BOX} \cite{NYSSENS202433}. This specific version of FD-SOI offers additional control over the threshold voltage, $V_{\symup{th}}$, through the biasing of the doped silicon layer (\textsl{well} \cite{7469814} or \textsl{ground-plane} \cite{nazarov_functional_2014}) beneath the box \cite{NYSSENS202433}. The terminal controlling the well beneath the BOX is called \textsl{back-gate} (BG) \cite{NYSSENS202433}.\par
+
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.7\linewidth]{assets/FD-SOI/FD-SOI_CMOS.png}
+			\caption{Cross-section of the n- and p-channel MOSFETs with back-gate wells and deep n-well in $28\unit{\nano\meter}$ UTBB FD-SOI CMOS process. Taken from \cite{7469814}.}
+			\label{fig:FDSOI:CMOS}
+		\end{figure}
+		One key advantage of FD-SOI devices is their reduced junction capacitance \cite{NYSSENS202433}. The drain junction capacitance, $C_{dj}$, can be decomposed into two capacitances: a vertical capacitance between the drain and the substrate, $C_{djv}$, and a lateral capacitance between the drain and the body of the MOSFET, $C_{jdl}$, \cite{FDSOICMOS}. Because the body is usually thin, especially in UTBB processes, $C_{jdl}$ is small \cite{FDSOICMOS}. Moreover, $C_{djv}$ is small thanks to the BOX and therefore, the total drain junction capacitance, $C_{dj}$, is small compared to that of bulk-Si and it is hardly affected by variations in the drain voltage \cite{FDSOICMOS}. Hence, the physical isolation of the active device from the substrate reduces junction capacitance enabling greater speeds and operation in lower voltages \cite{FDSOICMOS} which is crucial to reduction in power dissipation.\par
+
+		Additionally, FD-SOI devices exhibit a steeper subthreshold slope than bulk-Si \cite{FDSOICMOS}. A steeper subthreshold characteristic ($\log{\left( I_d \right)}$ vs $V_{g}$) means that at $V_{g}=0\unit{\volt}$ the leakage current will be significantly lower \cite{FDSOICMOS}. This is, partially, attributed to the isolation of the \textsl{active device} from the well trhough the BOX \cite{NYSSENS202433}.\par
+
+		In FD-SOI it is possible to lower the threshold voltage \cite{FDSOICMOS}; one way is through applying voltage bias to the back-gate of ultra-thin body (UTB) FD-SOI devices \cite{Fossum_Trivedi_2013}. According to \cite{FDSOICMOS}, the propagation delay time, $\tau$, in CMOS VLSI is inversely proportional to the square of the difference between the supply voltage, $V_{\symup{DD}}$, and the threshold voltage, $V_{\symup{th}}$. That is $\tau\propto\nicefrac{1}{\left( V_{\symup{DD}} - V_{\symup{th}} \right)^2}$. Hence, lowering the threshold voltage decreases the propagation delay time.\par
+
+		\cite{nazarov_functional_2014} and \cite{FDSOICMOS} report high transconductance-to-drain-current ratio, $\nicefrac{g_m}{I_d}$, values compared to bulk-Si, especially for smaller channel lengths. Furthermore, \cite{FDSOICMOS} claims sufficiently high output resistance, $r_{ds}=g_{ds}^{-1}$, for FD-SOI devices. Hence, the intrinsic voltage gain of FD-SOI devices $$A_v=\frac{g_m}{g_{ds}}=\frac{g_m}{I_d}V_{\symup{Early}},$$ where $V_{\symup{Early}}=\nicefrac{I_d}{g_{ds}}$ is the Early voltage, is high making it ideal for analog applications \cite{nazarov_functional_2014}. Taking into consideration the gain bandwidth product expression $$\symup{GBW}=\frac{g_m}{I_d}\cdot\frac{I_d}{2\pi C_L},$$ where $C_L$ represents a capacitive load, it is easy to see that it increases since $A_v$ increases.\par
+
+		DIBL can be minimized utilizing the back-gate \cite{FDSOICMOS}. Applying a back-gate bias the formation of a back-channel, beneath the BOX, is avoided \cite{FDSOICMOS}. \cite{5703287} showcases much lower DIBL for FD-SOI (Si film thickness, $t_{\symup{Si}}$, between $7\unit{\nano\meter}$ and $9\unit{\nano\meter}$) than bulk-Si and comparable DIBL to FinFETs.
+
+	\input{FD-SOI=Pixel.tex}
+
+	\input{FD-SOI=LNA.tex}

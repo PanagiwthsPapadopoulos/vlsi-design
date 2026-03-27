@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+	% Paths, nodes and wires:
+	\node[op amp] at (2, 4){};
+	\node[vcc](N1) at (0, 4.539){} node[anchor=south] at (N1.text){$V_{\symup{ref}}$};
+	\draw (0.81, 3.51) -| (0, 2);
+	\draw (0, 2) to[american resistor, l={$R_{1}$}] (0, -0);
+	\draw (1.5, 2) to[american resistor, l={$R_{f}$}] (3.5, 2);
+	\node[vcc](N2) at (1.917, 4.539){} node[anchor=south] at (N2.text){$V_{\symup{in}}$};
+	\node[vcc](N3) at (5, 4.539){} node[anchor=south] at (N3.text){$V_{\symup{in}}$};
+	\draw (3.19, 4) -- (4.02, 4);
+	\draw (0, 2) -- (1.5, 2);
+	\draw (3.5, 2) -- (6, 2);
+	\node[tlground] at (5, -0){};
+	\node[tlground] at (0, -0){};
+	\node[circ, xscale=0.75, yscale=0.75] at (0, 2){};
+	\node[circ, xscale=0.75, yscale=0.75] at (5, 2){};
+	\node[ocirc](N4) at (6, 2){} node[anchor=west] at (N4.text){$V_{\symup{out}}$};
+	\draw (5, 2) -| (5, 2.961);
+	\node[pigfete, solderdot](passElement) at (5, 3.73){} node[anchor=north east] at ([xshift=-0.27cm, yshift=-0.27cm]passElement.text){$\symup{M}_{\symup{pe}}$};
+	\draw[-latex] (5, 3) -- (5, 2.5);
+	\node[shape=rectangle, minimum width=0.465cm, minimum height=0.465cm](N5) at (5.25, 2.75){} node[anchor=center] at (N5.text){$I_{d}$};
+	\draw[-latex] (5.25, 3.333) -- (5.25, 4.167);
+	\node[shape=rectangle, minimum width=0.465cm, minimum height=0.465cm](N6) at (5.583, 3.667){} node[anchor=center] at (N6.text){$V_{sd}$};
+	\draw[-latex] (4.25, 2) -- (3.75, 2);
+	\node[shape=rectangle, minimum width=0.465cm, minimum height=0.465cm](N7) at (4, 1.70){} node[anchor=center] at (N7.text){$I_{f}$};
+	\node[ground] at (1.917, 3.461){};
+	\draw (0.81, 4.49) -| (0, 4.539);
+	\draw (5, 4.5) -| (5, 4.539);
+	\draw (5, 2) to[american current source, l={$I_{\symup{load}}$}] (5, -0);
+\end{tikzpicture}
